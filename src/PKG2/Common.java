@@ -14,6 +14,8 @@ import javax.swing.JOptionPane;
  */
 public class Common extends Exit {
 
+    private static String path = System.getProperty("user.dir");
+
     @Override
     public void exit() {
         int x = JOptionPane.showConfirmDialog(null, "Are you Sure", null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -25,10 +27,10 @@ public class Common extends Exit {
     public static void manual() {
         if (Desktop.isDesktopSupported()) {
             try {
-                File myFile = new File("manual\\manual.pdf");
+                File myFile = new File(path+"\\manual\\manual.pdf");
                 Desktop.getDesktop().open(myFile);
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, "Error: Cannot open the File");
+                JOptionPane.showMessageDialog(null, "Error: Cannot open the File"+path);
             }
         }
     }
@@ -36,7 +38,7 @@ public class Common extends Exit {
     public static void about() {
         if (Desktop.isDesktopSupported()) {
             try {
-                File myFile = new File("manual\\about.txt");
+                File myFile = new File(path+"\\manual\\about.txt");
                 Desktop.getDesktop().open(myFile);
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(null, "Error: Cannot open the File");
