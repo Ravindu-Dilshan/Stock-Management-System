@@ -30,7 +30,7 @@ public class Common extends Exit {
                 File myFile = new File(path+"\\manual\\manual.pdf");
                 Desktop.getDesktop().open(myFile);
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, "Error: Cannot open the File"+path);
+                JOptionPane.showMessageDialog(null, "Error: Cannot open the File \n"+path);
             }
         }
     }
@@ -41,7 +41,7 @@ public class Common extends Exit {
                 File myFile = new File(path+"\\manual\\about.txt");
                 Desktop.getDesktop().open(myFile);
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, "Error: Cannot open the File");
+                JOptionPane.showMessageDialog(null, "Error: Cannot open the File\n"+path);
             }
         }
     }
